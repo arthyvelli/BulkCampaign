@@ -1,4 +1,5 @@
 package tests;
+import java.lang.*;
 
 import java.io.IOException;
 import java.util.HashMap;
