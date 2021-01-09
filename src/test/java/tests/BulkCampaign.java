@@ -24,7 +24,7 @@ public class BulkCampaign extends TestBase{
 	
 	CampaignPage campaign;
 	@BeforeMethod
-	public void Login_To_App() {
+	public void Login_To_App() throws Exception {
 		Thread.sleep(1000);
 		
 		driver().get(TestConfig.getProperty("APP_URL"));
