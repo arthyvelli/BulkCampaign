@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 
@@ -16,11 +17,12 @@ public class DriverFactory {
 	public WebDriver getDriver(String browserName) throws Exception {
 		switch(browserName.toLowerCase()) {  
 		  case "chrome" : 
+				ChromeOptions chromeOptions = new ChromeOptions();
 				// WebDriverManager.chromedriver().setup();
-				 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
+				// System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
 				 WebDriverManager.chromedriver().setup();
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
-		                 driver =  new ChromeDriver();
+		                 driver =  new ChromeDriver(chromeOptions);
 				 Thread.sleep(1000);
 				System.out.println("Hello");
 				break;
