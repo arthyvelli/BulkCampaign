@@ -16,7 +16,7 @@ public class DriverFactory {
 	public WebDriver getDriver(String browserName) throws Exception {
 		switch(browserName.toLowerCase()) {  
 		  case "chrome" : 
-				 WebDriverManager.chromedriver().setup();
+				// WebDriverManager.chromedriver().setup();
 				System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
 				 WebDriverManager.chromedriver().setup();
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
