@@ -20,6 +20,7 @@ public class DriverFactory {
 				//ChromeOptions chromeOptions = new ChromeOptions();
 				// WebDriverManager.chromedriver().setup();
 				// System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
+				 WebDriverManager.chromedriver().clearPreferences();
 				 WebDriverManager.chromedriver().setup();
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
 		                 driver =  new ChromeDriver();
