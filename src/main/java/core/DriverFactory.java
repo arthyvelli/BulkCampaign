@@ -20,7 +20,8 @@ public class DriverFactory {
 				//System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
 			    //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
 		                driver =  new ChromeDriver();
-				 WebDriverManager.chromedriver().setup();
+				 Thread.sleep(1000);
+				System.out.println("Hello");
 				break;
 		  case "firefox" : 
 				System.setProperty("webdriver.gecko.driver","C:\\drivers\\geckodriver.exe");
