@@ -23,7 +23,7 @@ public class DriverFactory {
 				 WebDriverManager.chromedriver().driverVersion("85.0.4183.38").setup();
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
 		                 driver =  new ChromeDriver(chromeOptions);
-				 Thread.sleep(1000);
+				
 				System.out.println("Hello");
 				break;
 		  case "firefox" : 
