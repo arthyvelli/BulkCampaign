@@ -1,6 +1,6 @@
-# Created at 2021-01-09T12:17:22.663
+# Created at 2021-01-09T16:46:00.300
 Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
-Thread dump before exiting the process (2380@LAPTOP-SO07ETOA):
+Thread dump before exiting the process (48116@LAPTOP-SO07ETOA):
 "main" 
    java.lang.Thread.State: TIMED_WAITING
         at java.base@11/jdk.internal.misc.Unsafe.park(Native Method)
@@ -66,7 +66,7 @@ Thread dump before exiting the process (2380@LAPTOP-SO07ETOA):
         at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:432)
         at java.base@11/java.lang.Thread.run(Thread.java:834)
 
-"Forwarding findElement on session 357284685c37521fb6695d37e93d9dd3 to remote" 
+"Forwarding newSession on session null to remote" 
    java.lang.Thread.State: RUNNABLE
         at java.base@11/java.net.SocketInputStream.socketRead0(Native Method)
         at java.base@11/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
@@ -98,28 +98,28 @@ Thread dump before exiting the process (2380@LAPTOP-SO07ETOA):
         at app//okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
         at app//okhttp3.RealCall.execute(RealCall.java:77)
         at app//org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-        at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+        at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+        at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+        at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
         at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
         at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-        at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-        at app//org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-        at app//org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-        at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-        at app//org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-        at app//org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-        at app//org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-        at app//org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-        at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-        at app//pages.BasePage.waitForElement(BasePage.java:83)
-        at app//pages.CampaignDuplicatePage.Scheduleconfirm(CampaignDuplicatePage.java:134)
-        at app//pages.CampaignPage.Bulk_campaign1(CampaignPage.java:108)
-        at app//tests.BulkCampaign.Verify_Bulk_Campaign(BulkCampaign.java:47)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+        at app//org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+        at app//core.DriverFactory.getDriver(DriverFactory.java:20)
+        at app//tests.TestBase.initDriver(TestBase.java:56)
         at java.base@11/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
         at java.base@11/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
         at java.base@11/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
         at java.base@11/java.lang.reflect.Method.invoke(Method.java:566)
         at app//org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-        at app//org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+        at app//org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+        at app//org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+        at app//org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+        at app//org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:701)
+        at app//org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
         at app//org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
         at app//org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
         at app//org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
@@ -129,6 +129,34 @@ Thread dump before exiting the process (2380@LAPTOP-SO07ETOA):
         at java.base@11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
         at java.base@11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
         at java.base@11/java.lang.Thread.run(Thread.java:834)
+
+"UrlChecker-2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+        at java.base@11/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462)
+        at java.base@11/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361)
+        at java.base@11/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937)
+        at java.base@11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+        at java.base@11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+        at java.base@11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11/java.lang.Thread.run(Thread.java:834)
+
+"OkHttp ConnectionPool" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11/java.lang.Object.wait(Native Method)
+        at java.base@11/java.lang.Object.wait(Object.java:462)
+        at app//okhttp3.ConnectionPool$1.run(ConnectionPool.java:67)
+        at java.base@11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base@11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11/java.lang.Thread.run(Thread.java:834)
+
+"Okio Watchdog" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11/java.lang.Object.wait(Native Method)
+        at java.base@11/java.lang.Object.wait(Object.java:462)
+        at app//okio.AsyncTimeout.awaitTimeout(AsyncTimeout.java:361)
+        at app//okio.AsyncTimeout$Watchdog.run(AsyncTimeout.java:312)
 
 "Exec Default Executor" 
    java.lang.Thread.State: RUNNABLE
@@ -156,22 +184,6 @@ Thread dump before exiting the process (2380@LAPTOP-SO07ETOA):
         at java.base@11/java.io.FileInputStream.read(FileInputStream.java:257)
         at app//org.apache.commons.exec.StreamPumper.run(StreamPumper.java:107)
         at java.base@11/java.lang.Thread.run(Thread.java:834)
-
-"OkHttp ConnectionPool" 
-   java.lang.Thread.State: TIMED_WAITING
-        at java.base@11/java.lang.Object.wait(Native Method)
-        at java.base@11/java.lang.Object.wait(Object.java:462)
-        at app//okhttp3.ConnectionPool$1.run(ConnectionPool.java:67)
-        at java.base@11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-        at java.base@11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-        at java.base@11/java.lang.Thread.run(Thread.java:834)
-
-"Okio Watchdog" 
-   java.lang.Thread.State: TIMED_WAITING
-        at java.base@11/java.lang.Object.wait(Native Method)
-        at java.base@11/java.lang.Object.wait(Object.java:462)
-        at app//okio.AsyncTimeout.awaitTimeout(AsyncTimeout.java:361)
-        at app//okio.AsyncTimeout$Watchdog.run(AsyncTimeout.java:312)
 
 
 
