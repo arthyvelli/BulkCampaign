@@ -18,9 +18,9 @@ public class DriverFactory {
 		  case "chrome" : 
 				// WebDriverManager.chromedriver().setup();
 				System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
-				 WebDriverManager.chromedriver().setup();
+				// WebDriverManager.ChromeDriver().setup();
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
-		                driver =  new ChromeDriver();
+		                 driver =  new ChromeDriver();
 				 Thread.sleep(1000);
 				System.out.println("Hello");
 				break;
