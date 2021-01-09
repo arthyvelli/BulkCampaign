@@ -24,6 +24,7 @@ public class BulkCampaign extends TestBase{
 	CampaignPage campaign;
 	@BeforeMethod
 	public void Login_To_App() {
+		Thread.sleep(1000);
 		
 		driver().get(TestConfig.getProperty("APP_URL"));
 	}
@@ -32,6 +33,7 @@ public class BulkCampaign extends TestBase{
 	public void Verify_Bulk_Campaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
 		login = new LoginPage(driver());
+		Thread.sleep(1000);
 		report().logReport(LogStatus.INFO, "Application Launched", "Application launch successfull");
 		
 		login.peformLogin(data.get("username"),data.get("password"));
