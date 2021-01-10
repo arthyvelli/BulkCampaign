@@ -19,7 +19,7 @@ public class DriverFactory {
 		  case "chrome" : 
 				//ChromeOptions chromeOptions = new ChromeOptions();
 				// WebDriverManager.chromedriver().setup();
-				 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
+				 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver.exe");
 				// WebDriverManager.chromedriver().setup();
 				 //WebDriverManager.chromedriver().setup();
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
