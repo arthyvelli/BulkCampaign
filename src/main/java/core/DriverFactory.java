@@ -22,10 +22,16 @@ public class DriverFactory {
 				// System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
 				// WebDriverManager.chromedriver().setup();
 				 WebDriverManager.chromedriver().setup();
+				 ChromeOptions options = new ChromeOptions();
+			         options.addArguments("--no-sandbox"); //Bypass OS security model   
+			         options.addArguments("--start-maximized");
+			         options.addArguments("--disable-dev-shm-usage");
+			         options.addArguments("--headless");
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
-		                 driver =  new ChromeDriver();
+		                 driver =  new ChromeDriver(options);
 				
 				System.out.println("Hello");
+				Thread.sleep(1000);
 				break;
 		  case "firefox" : 
 				System.setProperty("webdriver.gecko.driver","C:\\drivers\\geckodriver.exe");
