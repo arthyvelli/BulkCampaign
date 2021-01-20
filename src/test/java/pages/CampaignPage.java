@@ -96,7 +96,7 @@ public class CampaignPage extends BasePage {
 		for(int j=0;j<userscount;j++) 
 		{
 			    
-			
+			         System.out.println("The sender ID is :"+Senderid[j]);
 				campdup.DuplicateEdit(Senderid[j]);
 
 			/*	cal.add(Calendar.MINUTE,5);
