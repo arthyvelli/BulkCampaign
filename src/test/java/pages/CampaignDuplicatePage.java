@@ -73,13 +73,8 @@ public class CampaignDuplicatePage  {
 		WebElement sendidselct = driver.findElement(By.xpath("//*[@id='app']/div/section/div[2]/div[1]/div/div[1]/form/div[4]/div[1]/div/div[2]"));
 		Actions builder = new Actions(driver);
 		
-		Action seriesOfActions = builder.moveToElement(sendidselct).sendKeys(sendidselct,Senderid).
-				sendKeys(Keys.ENTER).build();
-		
-		seriesOfActions.perform();
-		
-		
-	
+		builder.moveToElement(sendidselct).sendKeys(sendidselct,Senderid).
+				sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(1000);
 		
 		//Select Choose contact form wizard
