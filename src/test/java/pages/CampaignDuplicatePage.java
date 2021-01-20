@@ -75,7 +75,7 @@ public class CampaignDuplicatePage  {
 		
 		builder.moveToElement(sendidselct).sendKeys(sendidselct,Senderid).
 				sendKeys(Keys.ENTER).build().perform();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		
 		//Select Choose contact form wizard
 		BasePage.waitForElement(driver,CampaignElements.ChooseContactstage,30);
