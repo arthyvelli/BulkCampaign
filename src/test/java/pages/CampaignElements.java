@@ -1,4 +1,4 @@
-ppackage pages;
+package pages;
 
 public class CampaignElements {
 
