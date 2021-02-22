@@ -57,8 +57,7 @@ public class BulkCampaign extends TestBase{
 		
 		
 }
-/*
-	
+/*	
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_TimeBasedBulk_Campaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
@@ -75,7 +74,7 @@ public class BulkCampaign extends TestBase{
 		System.out.println("Launched driver Successufflu");
 		
 		tbcampaign = new TimeBaseCampaignPage(driver());
-		tbcampaign.getSenderId(data.get("senderid1"),data.get("senderid2"));
+		tbcampaign.getSenderId(data.get("senderid1"),data.get("senderid2"),data.get("senderid3"),data.get("senderid4"),data.get("senderid5"));
 		tbcampaign.Bulk_TBcampaign1(data.get("usercount"),(data.get("listname")));
 	}
 		/*
@@ -87,9 +86,9 @@ public class BulkCampaign extends TestBase{
 					"View No Error status didnt displayed");
 		}
 	}      
-	
+	*/
 		
-		*/
+		
 		
 		
 		

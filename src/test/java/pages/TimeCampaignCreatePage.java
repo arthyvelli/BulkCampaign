@@ -150,6 +150,7 @@ System.out.println("debuggging");
 			
 		
 	}
+	
 	public void chooseDay(String day) throws IOException, InterruptedException, ParseException, java.text.ParseException {
 		switch(day) {
 		  case "monday":

@@ -58,7 +58,7 @@ public class SanityTest extends TestBase{
 		
 		driver().get(TestConfig.getProperty("APP_URL"));
 	}
-/*	
+/*
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_Free_Plan(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Test For Verify Free plan");
@@ -140,7 +140,7 @@ public class SanityTest extends TestBase{
 		
 		
 	}
-	*/
+	
 
 	
 	@Test(dataProvider="extractData",priority=1)
@@ -162,7 +162,7 @@ public class SanityTest extends TestBase{
      //   System.out.println("Expected count "+ Integer.toString(results[1]));
        // assertEquals(Integer.toString(results[0]), Integer.toString(results[1]));
     }
-	/*
+	
 	 * @Test(dataProvider="extractData",priority=1) public void
 	 * Verify_generatDupliAutomation(HashMap<String,String> data) throws
 	 * ParseException, IOException, InterruptedException, Exception {
@@ -176,12 +176,12 @@ public class SanityTest extends TestBase{
 	 * report().logReport(LogStatus.INFO, "Login Successfully",
 	 * "Login successfully"); System.out.println("Launched driver successfully");
 	 * automation = new Automation(driver()); automation.generatDupliAutomation(); }
-	 */
+	
  
 	
 	
 	
-	/*
+
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_ABCampaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Test for Verify Automation susing duplicate");
@@ -247,7 +247,7 @@ public class SanityTest extends TestBase{
 		Assert.assertEquals(listNewName,listName);
 
 	}
-	
+	*/
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_AutoResponder(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
@@ -275,12 +275,12 @@ public class SanityTest extends TestBase{
 //		autoresponder.chooseCampaign("Autoresponder campaign");
 		autoresponder.autoresponderSchedule("1", "today");
 		Thread.sleep(1000);
-		String listNewName = CampGen.searchInList(listName);
-		Assert.assertEquals(listNewName,listName);
+		/*String listNewName = CampGen.searchInList(listName);
+		Assert.assertEquals(listNewName,listName);*/
 		
 
 	}
-	
+	/*
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_Contact_Add(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");

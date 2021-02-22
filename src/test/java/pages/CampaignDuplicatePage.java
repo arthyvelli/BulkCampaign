@@ -239,14 +239,14 @@ public class CampaignDuplicatePage  {
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,monstarttime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,monstarttime,"11:00");
+			BasePage.setText(driver,monstarttime,"08:00");
 			BasePage.waitForElement(driver,monendtime,50);
 			Thread.sleep(1000);
 			BasePage.clear(driver,monendtime);
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,monendtime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,monendtime,"12:00");
+			BasePage.setText(driver,monendtime,"18:00");
 			
 			
 			//Enter Campaign for Tuesday
@@ -257,14 +257,14 @@ public class CampaignDuplicatePage  {
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,tuestarttime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,tuestarttime,"11:00");
+			BasePage.setText(driver,tuestarttime,"08:00");
 			BasePage.waitForElement(driver,tueendtime,50);
 			Thread.sleep(1000);
 			BasePage.clear(driver,tueendtime);
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,tueendtime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,tueendtime,"12:00");
+			BasePage.setText(driver,tueendtime,"18:00");
 			
 			
 			//Enter Camapign for Wednesday
@@ -277,14 +277,14 @@ public class CampaignDuplicatePage  {
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,wedstarttime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,wedstarttime,"11:00");
+			BasePage.setText(driver,wedstarttime,"08:00");
 			BasePage.waitForElement(driver,wedendtime,50);
 			Thread.sleep(1000);
 			BasePage.clear(driver,wedendtime);
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,wedendtime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,wedendtime,"12:00");
+			BasePage.setText(driver,wedendtime,"18:00");
 			
 
 			//Enter Camapign for Thursday
@@ -296,14 +296,14 @@ public class CampaignDuplicatePage  {
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,thurstarttime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,thurstarttime,"11:00");
+			BasePage.setText(driver,thurstarttime,"08:00");
 			BasePage.waitForElement(driver,thurendtime,50);
 			Thread.sleep(1000);
 			BasePage.clear(driver,thurendtime);
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,thurendtime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,thurendtime,"12:00");
+			BasePage.setText(driver,thurendtime,"18:00");
 			
 			
 			//Enter Campaign for Friday
@@ -315,14 +315,14 @@ public class CampaignDuplicatePage  {
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,fristarttime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,fristarttime,"11:00");
+			BasePage.setText(driver,fristarttime,"08:00");
 			BasePage.waitForElement(driver,friendtime,50);
 			Thread.sleep(1000);
 			BasePage.clear(driver,friendtime);
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,friendtime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,friendtime,"12:00");
+			BasePage.setText(driver,friendtime,"18:00");
 			
 			//Enter Campaign for Saturday
 			BasePage.setText(driver, DateSat,"100000");
@@ -333,14 +333,14 @@ public class CampaignDuplicatePage  {
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,satstarttime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,satstarttime,"11:00");
+			BasePage.setText(driver,satstarttime,"08:00");
 			BasePage.waitForElement(driver,satendtime,50);
 			Thread.sleep(1000);
 			BasePage.clear(driver,satendtime);
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,satendtime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,satendtime,"12:00");
+			BasePage.setText(driver,satendtime,"18:00");
              
 			//Enter Campaign for Sunday
 			BasePage.setText(driver, DateSun,"100000");
@@ -351,14 +351,14 @@ public class CampaignDuplicatePage  {
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,sunstarttime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,sunstarttime,"11:00");
+			BasePage.setText(driver,sunstarttime,"08:00");
 			BasePage.waitForElement(driver,sunendtime,50);
 			Thread.sleep(1000);
 			BasePage.clear(driver,sunendtime);
 			Thread.sleep(1000);
 			BasePage.ClickElement(driver,sunendtime);
 			Thread.sleep(1000);
-			BasePage.setText(driver,sunendtime,"12:00");
+			BasePage.setText(driver,sunendtime,"18:00");
 
 
 			
