@@ -73,7 +73,7 @@ public class CampaignPage extends BasePage {
 
 
 		//redirect to Campaign list page
-		BasePage.waitForElement(driver,Dashbrd,50);
+		//BasePage.waitForElement(driver,Dashbrd,50);
 
 		driver.navigate().to("http://dash.vinmail.io/campaign");
 
