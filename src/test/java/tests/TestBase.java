@@ -38,7 +38,7 @@ public class TestBase {
 	@DataProvider
 	public Object[][] extractData(Method method) throws Exception {
 		String tcName = method.getName();
-		excel = new ExcelDataProvider(System.getProperty("user.dir")+"//src//test//resources//TestData.xlsx",System.getenv("env").toUpperCase());
+		excel = new ExcelDataProvider(System.getProperty("user.dir")+"//src//test//resources//TestData -Automation Emails.xlsx",System.getenv("env").toUpperCase());
 		List<HashMap<String,String>> data = excel.getAllData(tcName);
 		
 		Object[][] dataObj = new Object[data.size()][1];

@@ -8,8 +8,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.xmlbeans.impl.regex.ParseException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -67,6 +69,8 @@ public class AutoresponderCreatePage extends BasePage {
 		System.out.println("End");
 		
 	}
+	
+	
 	public void chooseCampaign(String campName) throws IOException, InterruptedException, ParseException, java.text.ParseException {
 		BasePage.ClickElement(driver,chooseCampaignBtn);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

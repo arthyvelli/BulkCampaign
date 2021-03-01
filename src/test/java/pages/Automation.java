@@ -205,12 +205,12 @@ public class Automation extends BasePage{
         ClickElement(driver,timeFeild1);
         Thread.sleep(1000);
        
-        setText(driver,timeFeild1, "08:00");
+        setText(driver,timeFeild1, "12:00");
         waitForElement(driver,timeFeild,20);
         clear(driver,timeFeild);
         ClickElement(driver,timeFeild);
        
-        setText(driver,timeFeild, "18:00");
+        setText(driver,timeFeild, "22:00");
     }
 	
 	public void AutomationFlow() throws InterruptedException {
