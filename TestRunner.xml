@@ -4,8 +4,7 @@
 <suite name="Suite1" verbose="1" >
   <test name="Regression1">
     <classes>
-      <class name="tests.SanityTest"/>
-      <class name="tests.BulkCampaign"/>
+       <class name="tests.BulkCampaign"/>
     </classes>
   </test>
 </suite>
