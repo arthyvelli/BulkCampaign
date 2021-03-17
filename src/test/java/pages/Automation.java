@@ -205,7 +205,7 @@ public class Automation extends BasePage{
         ClickElement(driver,timeFeild1);
         Thread.sleep(1000);
        
-        setText(driver,timeFeild1, "10:30");
+        setText(driver,timeFeild1, "15:00");
         waitForElement(driver,timeFeild,20);
         clear(driver,timeFeild);
         ClickElement(driver,timeFeild);
