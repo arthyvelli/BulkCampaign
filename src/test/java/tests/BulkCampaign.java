@@ -37,7 +37,7 @@ public class BulkCampaign extends TestBase{
 		driver().get(TestConfig.getProperty("APP_URL"));
 	}
 
-
+/*
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_Bulk_Campaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
@@ -63,7 +63,7 @@ public class BulkCampaign extends TestBase{
 		
 }
 	
-
+*/
 /*
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_AutoResponder(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
