@@ -37,7 +37,7 @@ public class BulkCampaign extends TestBase{
 		driver().get(TestConfig.getProperty("APP_URL"));
 	}
 
-/*
+
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_Bulk_Campaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
@@ -55,7 +55,8 @@ public class BulkCampaign extends TestBase{
 		
 		campaign = new CampaignPage(driver());
 		campaign.getSenderId(data.get("senderid1"),data.get("senderid2"),data.get("senderid3"),data.get("senderid4"),data.get("senderid5"));
-		campaign.Bulk_campaign1(data.get("usercount"),data.get("listname"));
+		campaign.getsegmentname(data.get("segment1"),data.get("segment2"),data.get("segment3"),data.get("segment4"),data.get("segment5"));
+		campaign.Bulk_campaign1(data.get("usercount"));
 		
 		
 		
@@ -63,7 +64,7 @@ public class BulkCampaign extends TestBase{
 		
 }
 	
-*/
+
 /*
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_AutoResponder(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
@@ -100,10 +101,10 @@ public class BulkCampaign extends TestBase{
 	
 
 	}
-*/
 
-	@Test(dataProvider="extractData",priority=2)
-    public void Verify_DupliAutomation(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
+
+	//Using List 
+	 public void Verify_DupliAutomation(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
         System.out.println("Test for Verify Automation susing duplicate");
         Thread.sleep(1000);
         login = new LoginPage(driver());
@@ -122,8 +123,33 @@ public class BulkCampaign extends TestBase{
      //   System.out.println("Expected count "+ Integer.toString(results[1]));
        // assertEquals(Integer.toString(results[0]), Integer.toString(results[1]));
     }
-	/*
-	@Test(dataProvider="extractData",priority=1)
+	 
+*/
+
+	//Using Segment 
+	@Test(dataProvider="extractData",priority=2)
+    public void Verify_DupliAutomation(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
+        System.out.println("Test for Verify Automation susing duplicate");
+        Thread.sleep(1000);
+        login = new LoginPage(driver());
+        report().logReport(LogStatus.INFO, "Application Launched", "Application launch successfully");
+        login.peformLogin(data.get("username"),data.get("password"));
+        report().logReport(LogStatus.INFO, "Username", data.get("username"));
+        report().logReport(LogStatus.INFO, "Password", data.get("password"));
+        report().logReport(LogStatus.INFO, "Login Successfully", "Login successfully");
+        System.out.println("Launched driver successfully");
+        automation = new Automation(driver());
+        automation.getautomationname(data.get("automationname1"),data.get("automationname2"),data.get("automationname3"),data.get("automationname4"),data.get("automationname5"));
+        automation.getsegmentname(data.get("segment1"),data.get("segment2"),data.get("segment3"),data.get("segment4"),data.get("segment5"));
+        for(int i=0;i<=4;i++) {
+        automation.generatDupliAutomation(i);
+        }
+        //System.out.println("Actual count"+ Integer.toString(results[0]));
+     //   System.out.println("Expected count "+ Integer.toString(results[1]));
+       // assertEquals(Integer.toString(results[0]), Integer.toString(results[1]));
+    }
+/*
+	@Test(dataProvider="extractData",priority=3)
 	public void Verify_TimeBasedBulk_Campaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
 		 Thread.sleep(1000);
@@ -140,7 +166,8 @@ public class BulkCampaign extends TestBase{
 		
 		tbcampaign = new TimeBaseCampaignPage(driver());
 		tbcampaign.getSenderId(data.get("senderid1"),data.get("senderid2"),data.get("senderid3"),data.get("senderid4"),data.get("senderid5"));
-		tbcampaign.Bulk_TBcampaign1(data.get("usercount"),(data.get("listname")));
+		tbcampaign.getsegmentname(data.get("segment1"),data.get("segment2"),data.get("segment3"),data.get("segment4"),data.get("segment5"));
+		tbcampaign.Bulk_TBcampaign1(data.get("usercount"));
 	}
 		/*
 		if(campaign.Verify_Bulk_campaign(data.get("UserCount")) == true) {
@@ -153,7 +180,7 @@ public class BulkCampaign extends TestBase{
 	}      
 	*/
 		
-		
+	
 		
 		
 		
