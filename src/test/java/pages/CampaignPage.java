@@ -77,7 +77,7 @@ public class CampaignPage extends BasePage {
 		//int Campcount=excel.getnum(0, i, 2);
 		System.out.println("No.of campaigns ="+userscount);
 
-		String myTime = "20:30";
+		String myTime = "07:30";
 		/*SimpleDateFormat df = new SimpleDateFormat("HH:mm");
 
 		Date d = df.parse(myTime); 
