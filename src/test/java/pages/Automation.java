@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 public class Automation extends BasePage{
 	public static String listName= "one lac";
 	 String[] autoName=new String[5];
-	
+	 String[] Segment=new String[5];
 	public static String campaign= "Pause campaign";
 	@FindBy(xpath="//*[@id='sidenav-main']")
 	private WebElement navDiv;
@@ -135,7 +135,14 @@ public class Automation extends BasePage{
 	@FindBy(xpath="//*[@class='text-content font-15 mb-0']")
 	private WebElement listCount;
 	
+	//segment
 	
+	@FindBy(xpath="//a[text()='Segments']")
+	private WebElement segmentSelect;
+	
+	@FindBy(xpath="//*[contains(@class, 'custom-radio')]")
+	private WebElement segment;
+
 	
 	public Automation(WebDriver driver) {
 		this.driver = driver;
@@ -205,12 +212,12 @@ public class Automation extends BasePage{
         ClickElement(driver,timeFeild1);
         Thread.sleep(1000);
        
-        setText(driver,timeFeild1, "13:00");
+        setText(driver,timeFeild1, "20:30");
         waitForElement(driver,timeFeild,20);
         clear(driver,timeFeild);
         ClickElement(driver,timeFeild);
        
-        setText(driver,timeFeild, "22:00");
+        setText(driver,timeFeild, "23:00");
     }
 	
 	public void AutomationFlow() throws InterruptedException {
@@ -285,11 +292,18 @@ public class Automation extends BasePage{
 		 autoName[3]=automationName4;
 		 autoName[4]=automationName5;
 	    	//Senderid[4]=senderid5;
-	    	
-
-	    	
+	     	
 	    }
 	
+	 
+ public void getsegmentname(String segment1,String segment2,String segment3,String segment4,String segment5) {
+    	 
+    	 Segment[0]=segment1;
+    	 Segment[1]=segment2;
+    	 Segment[2]=segment3;
+    	 Segment[3]=segment4;
+    	 Segment[4]=segment5;
+     }
 	public void generatDupliAutomation(int i) throws InterruptedException {
 	    Thread.sleep(1000);
 	    int j=i;
@@ -297,11 +311,7 @@ public class Automation extends BasePage{
 	   // getautomationname(automationName1, automationName2, automationName3, automationName4);
 	    driver.navigate().to("http://dash.vinmail.io/automation");
 	        //int beforCount = getCount();
-	       
-	    	
-	       
-	        	
-	        	System.out.println("Automation "+ autoName[i]);
+             	System.out.println("Automation "+ autoName[i]);
 	        	waitForElement(driver,filter,20);
 	        	waitForClick(driver,filter);
 	        	waitForElement(driver,searchWithAutomation,20);
@@ -312,7 +322,8 @@ public class Automation extends BasePage{
 	        	waitForClick(driver,toggleDropDown);
 	        	waitForElement(driver,dulicate,20);
 	        	waitForClick(driver,dulicate);
-	        	setDuplictes();
+	        	//setlist();
+	            setsegment(Segment[i]);
 	        	setDuplictesDetails();
 	        	waitForElement(driver,closePreview,20);
 	        	ClickElement(driver,closePreview);
@@ -320,46 +331,10 @@ public class Automation extends BasePage{
 	        	// waitForElement(driver,clear,20);
 	        	//waitForClick(driver,clear);
 	        }  
-	       //     int afterCount = getCount();
-	          //  int expectedCount =  beforCount + 1;
-	          //  System.out.println("before:" + beforCount);
-	          ////  System.out.println("after:"+ afterCount);
-	          //  System.out.println("expected:"+expectedCount);
-	           // return new int[] { afterCount, expectedCount };
+	       
 	     
-	/*
-	public void generatDupliAutomation() throws InterruptedException {
-	    Thread.sleep(1000);
-	    BasePage.waitForElement(driver,navDiv,50);
-		BasePage.ClickElement(driver,navDiv);
-		BasePage.waitForElement(driver,automation,50);
-		BasePage.ClickElement(driver,automation);
-	        waitForElement(driver,filter,20);
-	        waitForClick(driver,filter);
-	        for (int i = 1; i < 4; i++) 
-	        {
-	            System.out.println(i);
-	          
-	            moveToElement(driver,statusDropdown);
-	            waitForElement(driver,statusDropdown,50);
-	            ClickElement(driver,statusDropdown);
-	            waitForElement(driver,activeStatus,50);
-	            ClickElement(driver,activeStatus);
-	            waitForElement(driver,toggleDropDown,20);
-	            waitForClick(driver,toggleDropDown);
-	            waitForElement(driver,dulicate,20);
-	            waitForClick(driver,dulicate);
-	            setDuplictes();
-	            setDuplictesDetails();
-	            waitForElement(driver,closePreview,20);
-	            ClickElement(driver,closePreview);
-	            Thread.sleep(2000);
-	        }
-	        }
-
-	 
-*/
-	    public void setDuplictes() throws InterruptedException {
+	
+	    public void setlist() throws InterruptedException {
 	        Thread.sleep(1000);
 	         waitForElement(driver,search,50);
 	         setText(driver,search, listName);
@@ -372,6 +347,34 @@ public class Automation extends BasePage{
 	         ClickElement(driver,yesBtn);
 	    }
 	    
+	    public void setsegment(String Segmentname) throws InterruptedException {
+	        Thread.sleep(1000);
+	        
+	        waitForElement(driver,segmentSelect,50);
+			ClickElement(driver,segmentSelect);
+			waitForElement(driver,search,50);
+			setText(driver,search, Segmentname);
+			waitForElement(driver,segment,50);
+			ClickElement(driver,segment);
+			 datepicker();
+			 waitForElement(driver,yesBtn,20);
+	         ClickElement(driver,yesBtn);
+			
+	    }
+	        
+	        
+	       /* 
+	        
+	         waitForElement(driver,search,50);
+	         setText(driver,search, listName);
+	         Thread.sleep(1000);
+	         waitForElement(driver,duplicateForList,50);
+	         waitForClick(driver,duplicateForList);
+	        // waitUntilPageLoad(driver, 1000);
+	         datepicker();
+	         waitForElement(driver,yesBtn,20);
+	         ClickElement(driver,yesBtn);
+	    }*/
 	    public void setDuplictesDetails() throws InterruptedException {
 	        waitForElement(driver,editAutoBtn,20);
 	        ClickElement(driver,editAutoBtn);
