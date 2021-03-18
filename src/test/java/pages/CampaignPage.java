@@ -24,6 +24,8 @@ public class CampaignPage extends BasePage {
 	private WebDriver driver;
     String[] Senderid=new String[5];
     
+    String[] Segment=new String[5];
+    
     
 	
 	@FindBy(xpath="//h1[@class='font-28 font-head breadcrumbs-title']")
@@ -44,36 +46,26 @@ public class CampaignPage extends BasePage {
     	Senderid[2]=senderid3;
     	Senderid[3]=senderid4;
     	Senderid[4]=senderid5;
-    	
-
-    	
+    	   	
     }
-	public void Bulk_campaign1(String UserCount,String listname) throws IOException, InterruptedException, ParseException, java.text.ParseException{
+     
+     public void getsegmentname(String segment1,String segment2,String segment3,String segment4,String segment5) {
+    	 
+    	 Segment[0]=segment1;
+    	 Segment[1]=segment2;
+    	 Segment[2]=segment3;
+    	 Segment[3]=segment4;
+    	 Segment[4]=segment5;
+     }
+     
+     
+	public void Bulk_campaign1(String UserCount) throws IOException, InterruptedException, ParseException, java.text.ParseException{
 
 		Thread.sleep(1000);
 
-		//driver.get("http://dash.vinmail.io/autologin");
-		//ExcelConfig excel=new ExcelConfig("C:\\Users\\Bhoopathi S K V\\eclipse-workspace\\BulkSend_Campaign\\Excel1.xlsx");
-
-		//int userscount=excel.usercount(0);
 		int userscount=Integer.parseInt(UserCount);
-
-		//create a loop overall the rows of excel file to read it.
-		//for (int i=1;i<=userscount;i++)
-		//{
-		//Thread.sleep(1000);
-
-		//Enter username and password
-		//BasePage.waitForElement(driver,Loginelements.Email,25);
-
-		//BasePage.EnterText(driver,Loginelements.Email,excel.getData(0, i, 0));
-		//BasePage.EnterText(driver,Loginelements.password, excel.getData(0, i, 1));
-		//BasePage.ClickElement(driver,Loginelements.LoginButton);	
-		//System.out.println("client"+excel.getData(0, i, 0));
-
-
-		//redirect to Campaign list page
-		//BasePage.waitForElement(driver,Dashbrd,50);
+		
+		BasePage.waitForElement(driver,Dashbrd,50);
 
 		driver.navigate().to("http://dash.vinmail.io/campaign");
 
@@ -85,17 +77,17 @@ public class CampaignPage extends BasePage {
 		//int Campcount=excel.getnum(0, i, 2);
 		System.out.println("No.of campaigns ="+userscount);
 
-		String myTime = "13:00";
+		String myTime = "20:30";
 		/*SimpleDateFormat df = new SimpleDateFormat("HH:mm");
 
 		Date d = df.parse(myTime); 
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(d);				 
 */
-		//this.getSenderId(senderid1, senderid2, senderid3);
+		
 		for(int j=0;j<userscount;j++) 
 		{
-			campdup.DuplicateEdit(Senderid[j],listname);
+			campdup.DuplicateEdit(Senderid[j],Segment[j]);
 			System.out.println("Campaign"+j+" = "+myTime);
 			campdup.Schedule(myTime);
 			campdup.Scheduleconfirm();
