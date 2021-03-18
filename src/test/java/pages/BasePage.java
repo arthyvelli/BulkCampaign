@@ -120,9 +120,7 @@ public static void waitForAlert(WebDriver driver, long timeout) { // 25
 		.pollingEvery(Duration.ofSeconds(1))
 		.until(ExpectedConditions.alertIsPresent());
 	}
-	public long getTime() {
-	       return new java.util.Date().getTime();
-	   }
+	
 	
 //	public static void waitForClick(WebDriver driver, WebElement template) {
 //		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -141,10 +139,7 @@ public static void waitForAlert(WebDriver driver, long timeout) { // 25
      return df.format(dateobj);
 	}
 	
-	public void scrollVertical(WebDriver driver,int pix1, int pix2) {
-	       JavascriptExecutor js = (JavascriptExecutor) driver;
-	       js.executeScript("window.scrollBy("+pix1+","+pix2+")");
-	   }
+
 	
 	public void ScrollByVisibleElement(WebDriver driver,  WebElement Element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;        
@@ -187,5 +182,15 @@ public static void waitForAlert(WebDriver driver, long timeout) { // 25
 			driver.get(url);
 		}
 		
+	  public static long getTime() {
+	       return new java.util.Date().getTime();
+	   }
+	  
+
+		public static void scrollVertical(WebDriver driver,int pix1, int pix2) {
+		       JavascriptExecutor js = (JavascriptExecutor) driver;
+		       js.executeScript("window.scrollBy("+pix1+","+pix2+")");
+		   }
+
 
 }
