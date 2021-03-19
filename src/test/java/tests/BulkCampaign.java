@@ -102,7 +102,7 @@ public class BulkCampaign extends TestBase{
 
 	}
 
-
+*/
 	//Using List 
 	 public void Verify_DupliAutomation(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
         System.out.println("Test for Verify Automation susing duplicate");
@@ -124,8 +124,8 @@ public class BulkCampaign extends TestBase{
        // assertEquals(Integer.toString(results[0]), Integer.toString(results[1]));
     }
 	 
-*/
 
+/*
 	//Using Segment 
 	@Test(dataProvider="extractData",priority=2)
     public void Verify_DupliAutomation(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
