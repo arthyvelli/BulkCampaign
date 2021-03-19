@@ -26,7 +26,7 @@ public class DriverFactory {
 			         options.addArguments("--no-sandbox"); //Bypass OS security model   
 			         options.addArguments("--start-maximized");
 			         options.addArguments("--disable-dev-shm-usage");
-				 options.add_argument("--remote-debugging-port=9222");
+				 options.addArguments("--remote-debugging-port=9222");
 			        // options.addArguments("--headless");
 			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
 		                 driver =  new ChromeDriver(options);
