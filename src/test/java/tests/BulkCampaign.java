@@ -104,6 +104,7 @@ public class BulkCampaign extends TestBase{
 
 */
 	//Using List 
+	@Test(dataProvider="extractData",priority=1)
 	 public void Verify_DupliAutomation(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
         System.out.println("Test for Verify Automation susing duplicate");
         Thread.sleep(1000);
