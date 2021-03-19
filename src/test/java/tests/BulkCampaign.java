@@ -37,7 +37,7 @@ public class BulkCampaign extends TestBase{
 		driver().get(TestConfig.getProperty("APP_URL"));
 	}
 
-
+/*
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_Bulk_Campaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
@@ -65,7 +65,7 @@ public class BulkCampaign extends TestBase{
 }
 	
 
-/*
+
 	@Test(dataProvider="extractData",priority=1)
 	public void Verify_AutoResponder(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
@@ -148,7 +148,7 @@ public class BulkCampaign extends TestBase{
      //   System.out.println("Expected count "+ Integer.toString(results[1]));
        // assertEquals(Integer.toString(results[0]), Integer.toString(results[1]));
     }
-/*
+
 	@Test(dataProvider="extractData",priority=3)
 	public void Verify_TimeBasedBulk_Campaign(HashMap<String,String> data) throws ParseException, IOException, InterruptedException, Exception {
 		System.out.println("Hello");
