@@ -322,8 +322,8 @@ public class Automation extends BasePage{
 	        	waitForClick(driver,toggleDropDown);
 	        	waitForElement(driver,dulicate,20);
 	        	waitForClick(driver,dulicate);
-	        	//setlist();
-	            setsegment(Segment[i]);
+	        	setlist();
+	            //setsegment(Segment[i]);
 	        	setDuplictesDetails();
 	        	waitForElement(driver,closePreview,20);
 	        	ClickElement(driver,closePreview);
